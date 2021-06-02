@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <style>
+        .bg {
+            margin: 0 auto;
+
+        }
+
+        div {
+            text-align: center;
+            line-height: 60px;
+            height: 60px;
+            color: white;
+        }
+
+        .bg>div:nth-child(1) {
+            background-color: red;
+        }
+
+        .bg>div:nth-child(2) {
+            background-color: blue;
+        }
+
+        .bg>div:nth-child(3) {
+            background-color: black;
+        }
+
+        .bg>div:nth-child(4) {
+            background-color: orange;
+        }
+
+        @media screen and (min-width:1200px) {
+            .bg {
+                display: flex;
+                width: 1200px;
+            }
+
+            .bg>div {
+                flex-grow: 1;
+            }
+
+        }
+
+
+        @media screen and (min-width:992px) and (max-width:1200px) {
+            .bg {
+                display: flex;
+                width: 990px;
+                flex-wrap: wrap;
+            }
+
+            .bg>div:nth-child(1) {
+                flex: 0 0 100%;
+            }
+
+            .bg>div:nth-child(n+2) {
+                flex-grow: 1;
+            }
+
+        }
+
+
+        @media screen and (min-width:768px) and (max-width:992px) {
+            .bg {
+                display: flex;
+                width: 660px;
+                flex-wrap: wrap;
+            }
+
+            .bg>div {
+                flex: 0 0 50%;
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>
+
+</html>
